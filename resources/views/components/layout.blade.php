@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-3">
         <h1>{{ $title }}</h1>
 
         {{ $slot }} <!--Conteudo que vai ser adicionado depois-->

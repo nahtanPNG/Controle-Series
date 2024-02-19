@@ -1,5 +1,5 @@
 <x-layout title="Adicionar Série">
-    <form action="/series/salvar" method="POST">
+    <form action="{{ route('series.store') }}" method="POST">
         @csrf <!--Para o Laravel saber que essa ação é segura-->
         <div class="mb-3">
         <label for="nome" class="form-label">Nome:</label>
