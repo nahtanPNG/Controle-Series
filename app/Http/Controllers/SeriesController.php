@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Serie;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,6 +25,9 @@ class SeriesController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+                'nome'=> ['required', 'min:3']
+            ]);
         $serie = Serie::create($request->all());
 
         return to_route('series.index')->with('mensagem.sucesso', "Série '{$serie->nome}' adicionada com sucesso!");

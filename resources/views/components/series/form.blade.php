@@ -1,9 +1,9 @@
 <form action="{{ $action }}" method="POST">
     @csrf <!--Para o Laravel saber que essa ação é segura-->
 
-    @isset($nome) <!-- Se o nome está definido -> utilizar método put -->
+    @if($update) <!-- Se o nome está definido -> utilizar método put -->
     @method('PUT')
-    @endisset
+    @endif
 
     <div class="mb-3">
     <label for="nome" class="form-label">Nome:</label>
