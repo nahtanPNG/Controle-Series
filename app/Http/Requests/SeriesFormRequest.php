@@ -25,4 +25,12 @@ class SeriesFormRequest extends FormRequest
             'nome' => ['required', 'min:3']
         ];
     }
+
+    public function messages(): array //Retorna as mensagens de erro
+    {
+        return [
+            'nome.required' => 'Por favor, informe o nome da série.',
+            'nome.min' => 'O nome da série deve ter pelo menos :min caracteres.'
+        ];
+    }
 }
