@@ -12,7 +12,7 @@ class SeriesController extends Controller
 {
     public function index(Request $request)
     {
-        $series = Serie::query()->orderBy('nome')->get(); //Uma collection ordenada
+        $series = Serie::all(); //Uma collection ordenada
         $mensagemSucesso = session('mensagem.sucesso');
 
         //Seleciona a view e no segundo parametro passa os dados e a variavel que vai ser criada na view
