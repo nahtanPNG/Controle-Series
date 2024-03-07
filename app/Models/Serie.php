@@ -12,6 +12,6 @@ class Serie extends Model
 
     public function season() //método de relacionamento
     {
-        return $this->hasMany(Season::class); //Uma série vai ter um relacionamento de 1 para N com a tabela seasons
+        return $this->hasMany(Season::class, 'series_id'); //Uma série vai ter um relacionamento de 1 para N com a tabela seasons
     }
 }
