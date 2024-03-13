@@ -10,7 +10,6 @@ class Serie extends Model
 {
     use HasFactory;
     protected $fillable = ['nome'];
-    protected $with = ['season'];
 
     public function season() //método de relacionamento
     {
